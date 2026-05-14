@@ -1,0 +1,29 @@
+101;MDF Carvalho;20;350.00
+102;MDF Branco Fosco;15;320.00
+103;MDF Preto TX;10;410.00
+104;Compensado Naval;8;290.00
+105;Puxador Preto;50;15.90
+106;Puxador Dourado;30;24.50
+107;Corredica Telescopica;40;32.90
+109;Parafuso 5mm;500;0.30
+110;Parafuso 8mm;350;0.45
+111;Fita de Borda Branca;25;18.00
+112;Fita de Borda Carvalho;20;21.00
+113;Cola de Contato;18;35.00
+114;Vidro Temperado;12;180.00
+115;Perfil de Alumínio;22;75.00
+116;Rodizio para Moveis;60;9.90
+118;Cantoneira Metalica;80;4.20
+119;MDF Cinza Cristal;14;390.00
+120;MDF Freijo;11;430.00
+121;MDF Nude;9;415.00
+122;Puxador Embutido;25;29.90
+123;Corredica Invisivel;20;45.00
+124;Fechadura Armario;16;28.50
+125;Tinta Laca Branca;13;95.00
+126;Selador Madeira;10;55.00
+127;Lixa Madeira 220;70;3.00
+128;Lixa Madeira 120;65;2.80
+129;Fundo para MDF;8;88.00
+130;Painel Ripado;6;520.00
+131;cola;10;56.00
