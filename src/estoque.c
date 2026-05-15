@@ -49,17 +49,7 @@ void listarProdutos() {
         printf("%-10d\t%-25s%-10d\t%-10.2f\n\n",produtos[i].codigo,produtos[i].nome,
         produtos[i].quantidade,produtos[i].preco);
 
-        /*printf("\nCodigo: %d\n",
-        produtos[i].codigo);
-
-        printf("Nome: %s\n",
-        produtos[i].nome);
-
-        printf("Quantidade: %d\n",
-        produtos[i].quantidade);
-
-        printf("Preco: R$ %.2f\n",
-        produtos[i].preco);*/
+        
     }
 }
 
