@@ -4,11 +4,8 @@
 #include "../includes/produto.h"
 #include "../includes/menu.h"
 #include "../includes/arquivo.h"
+#include "../includes/validacao.h"
 
-void limparBuffer() {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-}
 
 void cadastrarProduto() {
 
@@ -18,6 +15,7 @@ void cadastrarProduto() {
     scanf("%d", &novo.codigo);
     limparBuffer();
     
+
     for (int i=0; i < totalProdutos; i++){
         if (produtos[i].codigo == novo.codigo){
             printf("%d o codigo ja foi cadastrado\n",novo.codigo);
@@ -65,13 +63,15 @@ void entradaProduto() {
 
     printf("\nCodigo do produto: ");
     scanf("%d", &codigo);
-
-    printf("Quantidade entrada: ");
-    scanf("%d", &quantidade);
+    limparBuffer();
 
     for(int i = 0; i < totalProdutos; i++) {
 
         if(produtos[i].codigo == codigo) {
+
+            printf("Quantidade entrada: ");
+            scanf("%d", &quantidade);
+            limparBuffer();
 
             produtos[i].quantidade += quantidade;
 
@@ -91,13 +91,14 @@ void saidaProduto() {
 
     printf("\nCodigo do produto: ");
     scanf("%d", &codigo);
-
-    printf("Quantidade retirada: ");
-    scanf("%d", &quantidade);
+    limparBuffer();
 
     for(int i = 0; i < totalProdutos; i++) {
 
         if(produtos[i].codigo == codigo) {
+            printf("Quantidade retirada: ");
+            scanf("%d", &quantidade);
+            limparBuffer();
 
             if(produtos[i].quantidade >= quantidade) {
 
@@ -124,6 +125,7 @@ void apagarProduto() {
 
     printf("\nCodigo do produto para apagar: ");
     scanf("%d", &codigo);
+    limparBuffer();
 
     for(int i = 0; i < totalProdutos; i++) {
 

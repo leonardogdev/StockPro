@@ -21,6 +21,7 @@ void menuPrincipal() {
 
         printf("Escolha: ");
         scanf("%d", &opcao);
+        limparBuffer();
 
         switch(opcao) {
 
