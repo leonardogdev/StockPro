@@ -3,6 +3,12 @@
 
 #include "../includes/produto.h"
 #include "../includes/menu.h"
+#include "../includes/arquivo.h"
+
+void limparBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
 
 void cadastrarProduto() {
 
@@ -10,33 +16,32 @@ void cadastrarProduto() {
 
     printf("\nCodigo: ");
     scanf("%d", &novo.codigo);
+    limparBuffer();
     
-    getchar();
-    for (int i=0; i <= totalProdutos; i++){
+    for (int i=0; i < totalProdutos; i++){
         if (produtos[i].codigo == novo.codigo){
             printf("%d o codigo ja foi cadastrado\n",novo.codigo);
-            i = totalProdutos++;
-            menuPrincipal();
+            return;
         }
     }
 
     printf("Nome: ");
     fgets(novo.nome, 50, stdin);
 
-    novo.nome[strcspn(novo.nome, "\n")] = 0;
+    novo.nome[strcspn(novo.nome, "\n")] = '\0';
 
     printf("Quantidade: ");
     scanf("%d", &novo.quantidade);
-    
+    limparBuffer();
 
     printf("Preco: ");
     scanf("%f", &novo.preco);
-    
+    limparBuffer();
 
     produtos[totalProdutos] = novo;
 
     totalProdutos++;
-
+    salvarDados();
     printf("\nProduto cadastrado com sucesso!\n");
 }
 
@@ -132,7 +137,7 @@ void apagarProduto() {
             }
 
             totalProdutos--;
-
+            salvarDados();
             printf("\nProduto removido com sucesso!\n");
 
             break;
