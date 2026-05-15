@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "../includes/produto.h"
+#include "../includes/menu.h"
 
 void cadastrarProduto() {
 
@@ -9,8 +10,15 @@ void cadastrarProduto() {
 
     printf("\nCodigo: ");
     scanf("%d", &novo.codigo);
-
+    
     getchar();
+    for (int i=0; i <= totalProdutos; i++){
+        if (produtos[i].codigo == novo.codigo){
+            printf("%d o codigo ja foi cadastrado\n",novo.codigo);
+            i = totalProdutos++;
+            menuPrincipal();
+        }
+    }
 
     printf("Nome: ");
     fgets(novo.nome, 50, stdin);
@@ -19,9 +27,11 @@ void cadastrarProduto() {
 
     printf("Quantidade: ");
     scanf("%d", &novo.quantidade);
+    
 
     printf("Preco: ");
     scanf("%f", &novo.preco);
+    
 
     produtos[totalProdutos] = novo;
 
@@ -33,10 +43,13 @@ void cadastrarProduto() {
 void listarProdutos() {
 
     printf("\n===== ESTOQUE =====\n");
+    printf("%-10s\t%-20s\t%-10s\t%-10s\n\n","codigo","nome","quantidade","preco");
 
     for(int i = 0; i < totalProdutos; i++) {
+        printf("%-10d\t%-25s%-10d\t%-10.2f\n\n",produtos[i].codigo,produtos[i].nome,
+        produtos[i].quantidade,produtos[i].preco);
 
-        printf("\nCodigo: %d\n",
+        /*printf("\nCodigo: %d\n",
         produtos[i].codigo);
 
         printf("Nome: %s\n",
@@ -46,7 +59,7 @@ void listarProdutos() {
         produtos[i].quantidade);
 
         printf("Preco: R$ %.2f\n",
-        produtos[i].preco);
+        produtos[i].preco);*/
     }
 }
 
