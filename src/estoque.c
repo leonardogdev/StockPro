@@ -12,10 +12,8 @@ void cadastrarProduto() {
     Produto novo;
 
     printf("\nCodigo: ");
-    scanf("%d", &novo.codigo);
-    limparBuffer();
-    
-
+    novo.codigo =  lerInteiro();
+   
     for (int i=0; i < totalProdutos; i++){
         if (produtos[i].codigo == novo.codigo){
             printf("%d o codigo ja foi cadastrado\n",novo.codigo);
@@ -29,12 +27,12 @@ void cadastrarProduto() {
     novo.nome[strcspn(novo.nome, "\n")] = '\0';
 
     printf("Quantidade: ");
-    scanf("%d", &novo.quantidade);
-    limparBuffer();
+    novo.quantidade = lerInteiro();
+    
 
     printf("Preco: ");
-    scanf("%f", &novo.preco);
-    limparBuffer();
+    novo.preco = lerFloat();
+    
 
     produtos[totalProdutos] = novo;
 
