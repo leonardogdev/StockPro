@@ -1,7 +1,7 @@
-#ifndef PRODUTO_H
+#ifndef PRODUTO_H 
 #define PRODUTO_H
 
-#define MAX_PRODUTOS 100
+#define MAX_PRODUTOS 100 // cria uma palavra identificadora com o valor de 100 
 
 typedef struct {
     int codigo;
@@ -10,7 +10,7 @@ typedef struct {
     float preco;
 } Produto;
 
-extern Produto produtos[MAX_PRODUTOS];
+extern Produto produtos[MAX_PRODUTOS]; // declaraçao global
 extern int totalProdutos;
 
 #endif

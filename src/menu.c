@@ -2,6 +2,7 @@
 
 #include "../includes/estoque.h"
 #include "../includes/arquivo.h"
+#include "../includes/validacao.h"
 
 void menuPrincipal() {
 

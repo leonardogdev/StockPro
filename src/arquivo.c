@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../includes/arquivo.h"
 #include "../includes/produto.h"
 
 Produto produtos[MAX_PRODUTOS];
@@ -6,9 +7,9 @@ int totalProdutos = 0;
 
 void salvarDados() {
 
-    FILE *arquivo;
+    FILE *arquivo; // cria um ponteiro
 
-    arquivo = fopen("data/dados.txt", "w");
+    arquivo = fopen("data/dados.txt", "w"); // cria um arquivo vazio
 
     if (arquivo == NULL) {
         printf("Erro ao salvar arquivo!\n");
@@ -37,9 +38,9 @@ void carregarDados() {
     if (arquivo == NULL) {
         return;
     }
-
+// %d inteiro ;%49[^;] ate 49 caracteres com espaço ;%d inteiro ;%f float
     while(fscanf(arquivo,
-    "%d;%49[^;];%d;%f",
+    "%d;%49[^;];%d;%f", 
     &produtos[totalProdutos].codigo,
     produtos[totalProdutos].nome,
     &produtos[totalProdutos].quantidade,

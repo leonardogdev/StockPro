@@ -26,3 +26,4 @@
 128;Lixa Madeira 120;65;2.80
 129;Fundo para MDF;8;88.00
 130;Painel Ripado;6;520.00
+
