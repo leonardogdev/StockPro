@@ -60,16 +60,16 @@ void entradaProduto() {
     int quantidade;
 
     printf("\nCodigo do produto: ");
-    scanf("%d", &codigo);
-    limparBuffer();
+    codigo = lerInteiro();
+    
 
     for(int i = 0; i < totalProdutos; i++) {
 
         if(produtos[i].codigo == codigo) {
 
             printf("Quantidade entrada: ");
-            scanf("%d", &quantidade);
-            limparBuffer();
+            quantidade = lerInteiro();
+            
 
             produtos[i].quantidade += quantidade;
 
@@ -88,15 +88,15 @@ void saidaProduto() {
     int quantidade;
 
     printf("\nCodigo do produto: ");
-    scanf("%d", &codigo);
-    limparBuffer();
+    codigo = lerInteiro();
+    
 
     for(int i = 0; i < totalProdutos; i++) {
 
         if(produtos[i].codigo == codigo) {
             printf("Quantidade retirada: ");
-            scanf("%d", &quantidade);
-            limparBuffer();
+            quantidade = lerInteiro();
+            
 
             if(produtos[i].quantidade >= quantidade) {
 
